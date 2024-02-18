@@ -7,7 +7,8 @@ import React, { Component } from 'react'
       super(props)
     
       this.state = {
-         posts:[]
+         posts:[],
+         errorMsg:""
       }
     }
 
@@ -17,18 +18,26 @@ import React, { Component } from 'react'
                 this.setState({posts:response.data})
             }
         ).catch(error=>{
-            console.log(error)
+            this.setState(
+              {errorMsg:"Retrieving Data is failed"}
+            )
         })
     }
 
 
   render() {
-    let {posts} = this.state
+    let {posts, errorMsg} = this.state
+    console.log(posts)
     return (
       <div>{
-        posts.length?
-        posts.map(post=><div id={post.id}>{post}</div>):null
-      }</div>
+        posts.length?posts.map(post=><ul  key={post.id}><li>{post.id}</li>
+        <li>{post.title}</li></ul>):null
+
+        }
+      {errorMsg?<div>{errorMsg}</div>:null}
+
+        
+      </div>
     )
   }
 }

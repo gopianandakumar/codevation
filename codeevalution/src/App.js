@@ -24,13 +24,15 @@ import CompA from './Components/CompA';
 import Compc from './Components/Compc';
 import {UserProvider} from './Components/UserContext'
 import PostList from './Components/PostList';
+import PostForm from './Components/PostForm';
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <PostList />
+        <PostForm/>
+        {/* <PostList /> */}
         {/* <UserProvider value="Gopi">
         <CompA/>
         </UserProvider> */}
