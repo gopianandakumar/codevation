@@ -25,13 +25,15 @@ import Compc from './Components/Compc';
 import {UserProvider} from './Components/UserContext'
 import PostList from './Components/PostList';
 import PostForm from './Components/PostForm';
+import HookCouneter from './Components/HookCouneter';
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <PostForm/>
+        <HookCouneter/>
+        {/* <PostForm/> */}
         {/* <PostList /> */}
         {/* <UserProvider value="Gopi">
         <CompA/>
