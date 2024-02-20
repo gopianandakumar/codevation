@@ -27,13 +27,20 @@ import PostList from './Components/PostList';
 import PostForm from './Components/PostForm';
 import HookCouneter from './Components/HookCouneter';
 import HookL from './Components/HookL';
+import HookCounter1 from './Components/HookCounter1';
+import HookCounter from './Components/HookCounter';
+import EffectFetch from './Components/EffectFetch';
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <HookL/>
+        <EffectFetch/>
+        {/* <HookCounter/> */}
+        {/* <HookCouneter/>? */}
+        {/* <HookCounter1/> */}
+        {/* <HookL/> */}
         {/* <HookCouneter/> */}
         {/* <PostForm/> */}
         {/* <PostList /> */}
