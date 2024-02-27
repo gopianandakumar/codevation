@@ -30,13 +30,27 @@ import HookL from './Components/HookL';
 import HookCounter1 from './Components/HookCounter1';
 import HookCounter from './Components/HookCounter';
 import EffectFetch from './Components/EffectFetch';
+import React from 'react';
+import CompB from './Components/CompB';
+import CounterOne from './Components/CounterOne';
+
+
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
+
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <EffectFetch/>
+        <CounterOne/>
+        {/* <UserContext.Provider value="formuser context">
+          <ChannelContext.Provider value="from channel contex">
+          <CompB/>
+          </ChannelContext.Provider>
+        </UserContext.Provider> */}
+        {/* <EffectFetch/> */}
         {/* <HookCounter/> */}
         {/* <HookCouneter/>? */}
         {/* <HookCounter1/> */}
@@ -45,7 +59,7 @@ function App() {
         {/* <PostForm/> */}
         {/* <PostList /> */}
         {/* <UserProvider value="Gopi">
-        <CompA/>
+        // <CompA/>
         </UserProvider> */}
         {/* <Counterc/> */}
         {/* <ErrorBoundary>

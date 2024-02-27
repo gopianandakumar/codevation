@@ -1,5 +1,6 @@
 import React from 'react'
 import { UserConsumer } from './UserContext'
+import { UserContext,ChannelContext } from '../App'
 
 function Compc() {
   return (
