@@ -33,6 +33,7 @@ import EffectFetch from './Components/EffectFetch';
 import React from 'react';
 import CompB from './Components/CompB';
 import CounterOne from './Components/CounterOne';
+import CounterTwo from './Components/CounterTwo';
 
 
 export const UserContext = React.createContext()
@@ -44,7 +45,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <CounterOne/>
+        <CounterTwo/>
+        {/* <CounterOne/> */}
         {/* <UserContext.Provider value="formuser context">
           <ChannelContext.Provider value="from channel contex">
           <CompB/>
