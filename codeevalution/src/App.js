@@ -30,22 +30,50 @@ import HookL from './Components/HookL';
 import HookCounter1 from './Components/HookCounter1';
 import HookCounter from './Components/HookCounter';
 import EffectFetch from './Components/EffectFetch';
-import React from 'react';
+import React,{useReducer} from 'react';
 import CompB from './Components/CompB';
 import CounterOne from './Components/CounterOne';
 import CounterTwo from './Components/CounterTwo';
+import CounterThree from './Components/CounterThree';
+import ComponentA1 from './Components/ComponentA1';
+import ComponentB1 from './Components/ComponentB1';
+import ComponentC1 from './Components/ComponentC1';
+
+export const CountContext = React.createContext()
 
 
+const initialState = 0
+const reducer =(state, action)=>{
+    switch(action){
+        case 'increment':
+            return state+1
+        case 'decrement':
+            return state-1 
+        case 'reset':
+            return initialState
+        default:
+            return state
+    }
+}
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
 
 
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
       <header className="App-header">
-        <CounterTwo/>
+        Count-{count}
+    <CountContext.Provider value={{ countState:count, countDispatch:dispatch}}>
+        <ComponentA1/>
+        <ComponentB1/>
+        <ComponentC1/>
+    </CountContext.Provider>
+
+        {/* <CounterThree/> */}
+        {/* <CounterTwo/> */}
         {/* <CounterOne/> */}
         {/* <UserContext.Provider value="formuser context">
           <ChannelContext.Provider value="from channel contex">
