@@ -39,6 +39,7 @@ import ComponentA1 from './Components/ComponentA1';
 import ComponentB1 from './Components/ComponentB1';
 import ComponentC1 from './Components/ComponentC1';
 import DataFetchingone from './Components/DataFetchingone';
+import MyCallBack from './Components/MyCallBack';
 
 export const CountContext = React.createContext()
 
@@ -66,7 +67,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <DataFetchingone/>
+        <MyCallBack />
+        {/* <DataFetchingone/> */}
         {/* Count-{count}
     <CountContext.Provider value={{ countState:count, countDispatch:dispatch}}>
         <ComponentA1/>
